@@ -5,7 +5,7 @@ const url=require('url')
 
 const server=http.createServer(function(req,res){
     if(req.url==='/'){
-        
+        // renders homepage
         fs.readFile('home.html',function(error,data){
                 if(error){
                     res.writeHead(404,{'content-Type':'text/html'})
@@ -18,6 +18,7 @@ const server=http.createServer(function(req,res){
     })
 }
     if(req.url==='/about'){
+        // renders About page
         fs.readFile('about.html',function(error,data){
             if(error){
                 res.writeHead(404,{'content-Type':'text/html'})
@@ -32,6 +33,7 @@ const server=http.createServer(function(req,res){
 
 
     if(req.url==='/contact'){
+        // renders contact page
        fs.readFile('contact.html',function(error,data){
                 if(error){
                     res.writeHead(404,{'content-Type':'text/html'})
